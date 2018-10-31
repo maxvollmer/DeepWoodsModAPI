@@ -18,6 +18,8 @@ namespace DeepWoodsMod.API
         // use this to seed a new Random when you need pseudorandom stuff synchronized between client and server
         // (hint: the Name for each DeepWoodsLocation is always "DeepWoods_"+Seed, except for the root level ("DeepWoods"))
         int Seed { get; }
+        // returns the parent DeepWoods (null if no parent exists)
+        IDeepWoodsLocation ParentDeepWoods { get; }
         // the location of the entrance in tile indices (x, y)
         Location EnterLocation { get; set; }
         // the size of the map in number of tiles (width x height)

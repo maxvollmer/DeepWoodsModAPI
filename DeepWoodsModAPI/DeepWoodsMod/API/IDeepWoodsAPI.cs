@@ -1,8 +1,10 @@
 ﻿
 using Microsoft.Xna.Framework;
+using StardewValley;
 using StardewValley.Monsters;
 using StardewValley.TerrainFeatures;
 using System;
+using xTile.Dimensions;
 
 namespace DeepWoodsMod.API
 {
@@ -32,5 +34,7 @@ namespace DeepWoodsMod.API
         void RegisterResourceClump(Func<IDeepWoodsLocation, Vector2, bool> decisionCallback, Func<ResourceClump> creationCallback);
         void RegisterObject(Func<IDeepWoodsLocation, Vector2, bool> decisionCallback, Func<StardewValley.Object> creationCallback);
         void RegisterMonster(Func<IDeepWoodsLocation, Vector2, bool> decisionCallback, Func<Monster> creationCallback);
+
+        void AddDeepWoodsWarpToGameLocation(GameLocation gameLocation, Location tile, string deepWoodsName);
     }
 }
