@@ -1,0 +1,32 @@
+﻿
+using Microsoft.Xna.Framework;
+using StardewValley.Monsters;
+using StardewValley.TerrainFeatures;
+using System;
+
+namespace DeepWoodsMod.API
+{
+    public interface IDeepWoodsAPI
+    {
+        event Action<IDeepWoodsLocation> OnCreate;
+
+        event Action<IDeepWoodsLocation> BeforeMapGeneration;
+        event Action<IDeepWoodsLocation> AfterMapGeneration;
+
+        event Action<IDeepWoodsLocation> BeforeFill;
+        event Action<IDeepWoodsLocation> AfterFill;
+
+        event Action<IDeepWoodsLocation> BeforeMonsterGeneration;
+        event Action<IDeepWoodsLocation> AfterMonsterGeneration;
+
+        event Func<IDeepWoodsLocation, bool> OverrideMapGeneration;
+        event Func<IDeepWoodsLocation, bool> OverrideFill;
+        event Func<IDeepWoodsLocation, bool> OverrideMonsterGeneration;
+
+        void RegisterTerrainFeature(Func<IDeepWoodsLocation, Vector2, bool> decisionCallback, Func<TerrainFeature> creationCallback);
+        void RegisterLargeTerrainFeature(Func<IDeepWoodsLocation, Vector2, bool> decisionCallback, Func<LargeTerrainFeature> creationCallback);
+        void RegisterResourceClump(Func<IDeepWoodsLocation, Vector2, bool> decisionCallback, Func<ResourceClump> creationCallback);
+        void RegisterObject(Func<IDeepWoodsLocation, Vector2, bool> decisionCallback, Func<StardewValley.Object> creationCallback);
+        void RegisterMonster(Func<IDeepWoodsLocation, Vector2, bool> decisionCallback, Func<Monster> creationCallback);
+    }
+}
