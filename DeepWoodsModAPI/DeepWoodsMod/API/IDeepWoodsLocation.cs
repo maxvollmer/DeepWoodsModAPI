@@ -39,10 +39,10 @@ namespace DeepWoodsMod.API
         // returns all exits from this level
         IEnumerable<IDeepWoodsExit> Exits { get; }
         // returns all resourceclumps in this level
-        IEnumerable<ResourceClump> ResourceClumps { get; }
+        ICollection<ResourceClump> ResourceClumps { get; }
         // returns the baubles in this level
-        IEnumerable<Vector2> Baubles { get; }
+        ICollection<Vector2> Baubles { get; }
         // returns the leaves in this level
-        IEnumerable<WeatherDebris> WeatherDebris { get; }
+        ICollection<WeatherDebris> WeatherDebris { get; }
     }
 }

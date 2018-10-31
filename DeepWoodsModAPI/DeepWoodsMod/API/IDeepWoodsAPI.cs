@@ -19,9 +19,13 @@ namespace DeepWoodsMod.API
         event Action<IDeepWoodsLocation> BeforeMonsterGeneration;
         event Action<IDeepWoodsLocation> AfterMonsterGeneration;
 
+        event Action<IDeepWoodsLocation> BeforeDebrisCreation;
+        event Action<IDeepWoodsLocation> AfterDebrisCreation;
+
         event Func<IDeepWoodsLocation, bool> OverrideMapGeneration;
         event Func<IDeepWoodsLocation, bool> OverrideFill;
         event Func<IDeepWoodsLocation, bool> OverrideMonsterGeneration;
+        event Func<IDeepWoodsLocation, bool> OverrideDebrisCreation;
 
         void RegisterTerrainFeature(Func<IDeepWoodsLocation, Vector2, bool> decisionCallback, Func<TerrainFeature> creationCallback);
         void RegisterLargeTerrainFeature(Func<IDeepWoodsLocation, Vector2, bool> decisionCallback, Func<LargeTerrainFeature> creationCallback);
