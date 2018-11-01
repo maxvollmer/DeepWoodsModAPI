@@ -46,5 +46,7 @@ namespace DeepWoodsMod.API
         ICollection<Vector2> Baubles { get; }
         // returns the leaves in this level
         ICollection<WeatherDebris> WeatherDebris { get; }
+        // true if this level has a custom map provided by a mod
+        bool IsCustomMap { get; }
     }
 }

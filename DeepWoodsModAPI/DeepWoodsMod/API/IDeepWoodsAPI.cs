@@ -35,7 +35,7 @@ namespace DeepWoodsMod.API
         void RegisterObject(Func<IDeepWoodsLocation, Vector2, bool> decisionCallback, Func<StardewValley.Object> creationCallback);
         void RegisterMonster(Func<IDeepWoodsLocation, Vector2, bool> decisionCallback, Func<Monster> creationCallback);
 
-        void AddDeepWoodsWarpToGameLocation(GameLocation gameLocation, Location sourceTile, string deepWoodsName, Location destinationTile, int enterDirection);
-        void RemoveDeepWoodsWarpFromGameLocation(GameLocation gameLocation, Location sourceTile);
+        void AddExitLocation(IDeepWoodsLocation deepWoodsLocation, IDeepWoodsExit exit, Location tile);
+        void RemoveExitLocation(IDeepWoodsLocation deepWoodsLocation, Location tile);
     }
 }
