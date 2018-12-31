@@ -51,6 +51,7 @@
     <Compile Include="DeepWoodsMod\API\IDeepWoodsAPI.cs" />
     <Compile Include="DeepWoodsMod\API\IDeepWoodsExit.cs" />
     <Compile Include="DeepWoodsMod\API\IDeepWoodsLocation.cs" />
+    <Compile Include="DeepWoodsMod\API\IDeepWoodsTextures.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

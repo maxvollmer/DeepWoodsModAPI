@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
 using StardewValley.Monsters;
 using StardewValley.TerrainFeatures;
@@ -37,5 +38,7 @@ namespace DeepWoodsMod.API
 
         void AddExitLocation(IDeepWoodsLocation deepWoodsLocation, IDeepWoodsExit exit, Location tile);
         void RemoveExitLocation(IDeepWoodsLocation deepWoodsLocation, Location tile);
+
+        IDeepWoodsTextures Textures { get; }
     }
 }
