@@ -39,6 +39,8 @@ namespace DeepWoodsMod.API
         void AddExitLocation(IDeepWoodsLocation deepWoodsLocation, IDeepWoodsExit exit, Location tile);
         void RemoveExitLocation(IDeepWoodsLocation deepWoodsLocation, Location tile);
 
+        void WarpPlayerToDeepWoodsLevel(int level);
+
         IDeepWoodsTextures Textures { get; }
     }
 }
