@@ -9,6 +9,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>https://www.nexusmods.com/stardewvalley/mods/2571/</projectUrl>
     <description>API for the DeepWoodsMod for Stardew Valley.</description>
-    <releaseNotes>Added callback for texture asset replacements.</releaseNotes>
+    <releaseNotes>Update for Stardew Valley 1.5.5.</releaseNotes>
   </metadata>
 </package>
